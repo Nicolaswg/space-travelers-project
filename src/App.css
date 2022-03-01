@@ -1,10 +1,15 @@
+:root {
+  --color-primary: #0290ff;
+  --border-color: #ccc;
+}
+
 /* ! HEADER */
 
 header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-color);
   padding: 10px 0;
 }
 
@@ -20,15 +25,29 @@ header {
 .links {
   display: flex;
   align-items: center;
-  width: 20%;
   justify-content: space-around;
+  gap: 20px;
+}
+
+.links a:nth-child(2)::after {
+  content: '';
+  border: 1px solid var(--border-color);
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-primary);
 }
 
 .content-align {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 20px;
 }
 
 .active {
   text-decoration: underline;
+  color: var(--color-primary);
 }

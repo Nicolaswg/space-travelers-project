@@ -13,16 +13,18 @@ import Missions from './components/Missions';
 import Profile from './components/Profile';
 
 const App = () => (
-  <Router>
-    <Header className="App-header" />
-    <Routes>
-      <div className="App">
-        <Route path="/missions" element={<Rockets className="rockets" />} />
-        <Route path="/profile" element={<Missions className="missions" />} />
-        <Route path="/profile" element={<Profile className="profile" />} />
-      </div>
-    </Routes>
-  </Router>
+  <div className="content-align">
+    <Router>
+      <Header className="App-header" />
+      <Routes>
+        <>
+          <Route path="/" element={<Rockets className="rockets" />} />
+          <Route path="/missions" element={<Missions className="missions" />} />
+          <Route path="/profile" element={<Profile className="profile" />} />
+        </>
+      </Routes>
+    </Router>
+  </div>
 );
 
 export default App;

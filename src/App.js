@@ -1,4 +1,5 @@
 import './App.css';
+import './reset.css';
 
 const App = () => (
   <div className="App">

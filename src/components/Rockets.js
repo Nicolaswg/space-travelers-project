@@ -4,9 +4,9 @@ import RocketItem from './RocketItem';
 
 export default function Rockets() {
   const rocketData = useSelector((state) => state.rocketsReducer);
-
+  console.log(rocketData);
   return (
-    <div className="rocket-container">
+    <div className="rocket-container flex">
       {rocketData.map((rocket) => (
         <RocketItem
           id={rocket.id}

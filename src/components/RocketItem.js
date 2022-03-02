@@ -11,17 +11,19 @@ const RocketItem = (props) => {
   } = props;
 
   return (
-    <div className="rocket-card" id={id}>
+    <div className="rocket-card flex" id={id}>
       <div className="img-container">
         <img src={image} alt="img" />
       </div>
       <div className="rocket-content">
         <h2>{name}</h2>
-        <span>
-          {reserved}
-        </span>
-        <p>{description}</p>
-        <button type="button">Reserve Rocket</button>
+        <p>
+          <span>
+            {reserved.toString()}
+          </span>
+          {description}
+        </p>
+        <button className="reserved" type="button">Reserve Rocket</button>
       </div>
     </div>
   );

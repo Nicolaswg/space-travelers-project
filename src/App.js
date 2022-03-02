@@ -16,15 +16,13 @@ import Profile from './components/Profile';
 
 const App = () => (
   <Provider store={store}>
-    <div className="content-align">
+    <div className="content-align flex">
       <Router>
         <Header className="App-header" />
         <Routes>
-          <>
-            <Route path="/" element={<Rockets className="rockets" />} />
-            <Route path="/missions" element={<MissionsContainer className="missions" />} />
-            <Route path="/profile" element={<Profile className="profile" />} />
-          </>
+          <Route path="/" element={<Rockets />} />
+          <Route path="/missions" element={<MissionsContainer />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </div>

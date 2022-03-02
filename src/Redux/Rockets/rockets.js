@@ -1,4 +1,4 @@
-const GET_ROCKETS_API = 'SpaceTravelersHub/missions/GET_MISSIONS_API';
+const GET_ROCKETS_API = 'SpaceTravelersHub/missions/GET_ROCKETS_API';
 const ROCKET_API = 'https://api.spacexdata.com/v3/rockets';
 
 const initialState = [];

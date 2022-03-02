@@ -19,7 +19,7 @@ const MissionTable = (props) => {
 MissionTable.propTypes = {
   description: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default MissionTable;

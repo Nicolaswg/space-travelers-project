@@ -18,12 +18,10 @@ const RocketItem = (props) => {
       <div className="rocket-content">
         <h2>{name}</h2>
         <p>
-          <span>
-            {reserved.toString()}
-          </span>
+          {reserved ? (<></>) : (<span>Reserved</span>)}
           {description}
         </p>
-        <button className="reserved" type="button">Reserve Rocket</button>
+        {reserved ? (<button className="not-reserved" type="button">Reserve Rocket</button>) : (<button className="reserved" type="button">Cancel Reservation</button>)}
       </div>
     </div>
   );

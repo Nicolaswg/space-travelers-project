@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 import planet from '../assets/planet.png';
 
 const Header = () => (
-  <header>
-    <div className="main-title">
+  <header className="flex">
+    <div className="main-title flex">
       <img src={planet} alt="space" className="planet-logo" />
       <h1>Space Travelers&apos; Hub</h1>
     </div>
-    <div className="links">
+    <div className="links flex">
       <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'link ')}>
         Rockets
       </NavLink>

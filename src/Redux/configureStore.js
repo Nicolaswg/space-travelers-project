@@ -1,20 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import missionsReducer, { getMissionsFromAPI } from './Missions/missions';
-// import rocketsReducer, { getRocketsFromAPI } from './Rockets/rockets';
-// import profileReducer from './Profile/profile';
+import rocketsReducer, { getRocketsFromAPI } from './Rockets/rockets';
 
 const reducer = combineReducers({
+  rocketsReducer,
   missionsReducer,
-  // rocketsReducer,
 });
 
-const store = createStore(
-  reducer,
-  applyMiddleware(logger, thunk),
-);
+const store = createStore(reducer, applyMiddleware(thunk));
 
+store.dispatch(getRocketsFromAPI());
 store.dispatch(getMissionsFromAPI());
-// store.dispatch(getRocketsFromAPI());
 export default store;

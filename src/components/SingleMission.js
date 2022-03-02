@@ -9,10 +9,9 @@ const MissionTable = (props) => {
   } = props;
 
   return (
-    <tr>
+    <tr id={id}>
       <td>{name}</td>
       <td>{description}</td>
-      <td>{id}</td>
     </tr>
   );
 };

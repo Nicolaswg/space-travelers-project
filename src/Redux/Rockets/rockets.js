@@ -15,8 +15,9 @@ export const getRocketsFromAPI = () => async (dispatch) => {
       const arrData = data.map((rocket) => ({
         id: rocket.id,
         name: rocket.rocket_name,
-        type: rocket.rocket_type,
+        description: rocket.description,
         image: rocket.flickr_images[0],
+        reserved: false,
       }));
       if (arrData) {
         dispatch(getRockets(arrData));

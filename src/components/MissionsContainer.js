@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import SingleMission from './SingleMission';
 
-export default function Missions() {
+export default function MissionsContainer() {
   const MissionsData = useSelector((state) => state.missionsReducer);
   // console.log(MissionsData);
   return (

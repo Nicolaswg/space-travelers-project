@@ -8,8 +8,6 @@ const MissionTable = (props) => {
     description,
   } = props;
 
-  // console.log(reserved);
-
   return (
     <tr>
       <td>{name}</td>

@@ -51,3 +51,10 @@ header {
   text-decoration: underline;
   color: var(--color-primary);
 }
+
+/* ! MISSIONS */
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}

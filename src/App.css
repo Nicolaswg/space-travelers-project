@@ -2,6 +2,7 @@
   --color-primary: #0290ff;
   --border-color: #ccc;
   --font-family: sans-serif;
+  --button-color: #0fcfb6;
 }
 
 .flex {
@@ -64,6 +65,80 @@ td {
   border-collapse: collapse;
 }
 
+td {
+  padding: 10px;
+}
+
+thead td {
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-width: 150px;
+}
+
+tbody td {
+  font-size: 0.8rem;
+}
+
+.align-verticle {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.mission-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.active-member {
+  color: #fff;
+  background-color: var(--button-color);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.not-member {
+  background-color: #666;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.leave-mission {
+  color: #b91a1a;
+  padding: 10px;
+  border: 1px solid #b91a1a;
+  background-color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 600ms ease, color 600ms ease;
+}
+
+.leave-mission:hover {
+  background-color: #b91a1a;
+  color: #fff;
+}
+
+.join-mission {
+  background-color: transparent;
+  border: 1px solid #444;
+  color: #666;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 600ms ease, color 600ms ease;
+}
+
+.join-mission:hover {
+  background-color: rgba(68, 68, 68, 0.4);
+  color: #fff;
+}
+
+.background-gray {
+  background-color: #eee;
+}
+
 /* ! ROCKETS */
 
 .rocket-container {
@@ -87,9 +162,10 @@ td {
 
 .rocket-content p span {
   padding: 4px 7px;
-  background-color: rgb(15, 207, 182);
+  background-color: var(--button-color);
   margin-right: 4px;
   border-radius: 10px;
+  color: #fff;
 }
 
 .img-container {

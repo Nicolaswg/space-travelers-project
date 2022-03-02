@@ -9,10 +9,10 @@ export default function MissionsContainer() {
     <table>
       <thead>
         <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th>Action</th>
+          <td>Mission</td>
+          <td>Description</td>
+          <td>Status</td>
+          <td> </td>
         </tr>
       </thead>
       <tbody>
@@ -22,6 +22,7 @@ export default function MissionsContainer() {
             name={mission.name}
             description={mission.description}
             id={mission.id}
+            reserved={mission.reserved}
           />
         ))}
       </tbody>

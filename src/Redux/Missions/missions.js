@@ -12,6 +12,7 @@ export const getMissionsFromAPI = () => async (dispatch) => {
   await fetch(`${MISSIONS_API}`)
     .then((response) => response.json())
     .then((data) => {
+      // console.log(data);
       const arrData = data.map((mission) => ({
         id: mission.mission_id,
         name: mission.mission_name,

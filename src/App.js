@@ -9,7 +9,7 @@ import {
 // Components
 import Header from './components/Header';
 import Rockets from './components/Rockets';
-import Missions from './components/Missions';
+import MissionsContainer from './components/MissionsContainer';
 import Profile from './components/Profile';
 
 const App = () => (
@@ -19,7 +19,7 @@ const App = () => (
       <Routes>
         <>
           <Route path="/" element={<Rockets className="rockets" />} />
-          <Route path="/missions" element={<Missions className="missions" />} />
+          <Route path="/missions" element={<MissionsContainer className="missions" />} />
           <Route path="/profile" element={<Profile className="profile" />} />
         </>
       </Routes>

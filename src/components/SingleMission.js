@@ -21,7 +21,7 @@ const MissionTable = (props) => {
   };
 
   return (
-    <tr className={reserved ? 'background-gray' : ''} id={id}>
+    <tr className="background-gray" id={id}>
       <td className="mission-name">{name}</td>
       <td>{description}</td>
       {reserved ? (<td className="align-verticle"><span className="active-member">Active member</span></td>) : (<td className="align-verticle"><span className="not-member">NOT A MEMBER</span></td>)}

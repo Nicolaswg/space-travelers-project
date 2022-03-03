@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --color-primary: #0290ff;
   --border-color: #ccc;
@@ -135,7 +139,7 @@ tbody td {
   color: #fff;
 }
 
-.background-gray {
+.background-gray:nth-child(even) {
   background-color: #eee;
 }
 
@@ -199,4 +203,42 @@ tbody td {
   border-radius: 5px;
   color: #999;
   cursor: pointer;
+}
+
+/* ! PROFILE */
+
+.profile-container {
+  justify-content: space-around;
+}
+
+.profile-container .missions-container,
+.profile-container .rockets-container {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+.profile-container .missions-container h1,
+.profile-container .rockets-container h1 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+.profile-container .missions-container ul,
+.profile-container .rockets-container ul {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-container .missions-container li,
+.profile-container .rockets-container li {
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2rem;
+  padding: 20px;
+  color: #666;
+}
+
+.profile-container .missions-container li:last-child,
+.profile-container .rockets-container li:last-child {
+  border-bottom: none;
 }

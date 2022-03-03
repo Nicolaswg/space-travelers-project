@@ -1,10 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import SingleMission from './SingleMission';
+import MissionTable from './SingleMission';
 
 export default function MissionsContainer() {
   const missionsData = useSelector((state) => state.missionsReducer);
-  console.log(missionsData);
   return (
     <table>
       <thead>
@@ -17,7 +16,7 @@ export default function MissionsContainer() {
       </thead>
       <tbody>
         {missionsData.map((mission) => (
-          <SingleMission
+          <MissionTable
             key={mission.id}
             name={mission.name}
             description={mission.description}

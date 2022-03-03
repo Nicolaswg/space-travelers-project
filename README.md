@@ -13,9 +13,9 @@ https://user-images.githubusercontent.com/78875455/156580592-d4823be9-2185-4524-
 - React, Redux
 - SpaceX API
 
-## Live Demo (Currently not available)
+## Live Demo
 
-[live demo link]()
+[live demo link](https://space-travelers-react.herokuapp.com/)
 
 ## Authors
 

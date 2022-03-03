@@ -3,9 +3,7 @@ import { useSelector } from 'react-redux';
 
 export default function Profile() {
   const missions = useSelector((state) => state.missionsReducer);
-  // const rockets = useSelector((state) => state.rocketsReducer);
-
-  // const rocketsReserved = rockets.filter((rocket) => rocket.reserved === true);
+  const rockets = useSelector((state) => state.rocketsReducer);
 
   return (
     <div className="profile-container flex">
@@ -13,14 +11,17 @@ export default function Profile() {
         <h1>My Missions</h1>
         <ul>
           {missions.filter((mission) => mission.reserved === true).map((item) => (
-            item.reserved ? (<li>{item.name}</li>) : (<h2>No MIssions are added...</h2>)
+            item.reserved ? (<li key={item.id}>{item.name}</li>) : (<></>)
           ))}
         </ul>
       </div>
       <div className="rockets-container">
         <h1>My Rockets</h1>
         <ul>
-          <li>hebehdbeh</li>
+          {rockets.filter((rocket) => rocket.reserved === true).map((item) => (
+            item.reserved ? (<li key={item.id}>{item.name}</li>)
+              : (<></>)
+          ))}
         </ul>
       </div>
     </div>

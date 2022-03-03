@@ -238,3 +238,7 @@ tbody td {
 .profile-container .rockets-container li:last-child {
   border-bottom: none;
 }
+
+::-webkit-scrollbar {
+	display: none;
+}

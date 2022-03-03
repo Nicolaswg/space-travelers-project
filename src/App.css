@@ -1,0 +1,244 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-primary: #0290ff;
+  --border-color: #ccc;
+  --font-family: sans-serif;
+  --button-color: #0fcfb6;
+}
+
+.flex {
+  display: flex;
+}
+
+/* ! HEADER */
+
+header {
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+  font-family: var(--font-family);
+}
+
+.main-title img {
+  width: 70px;
+}
+
+.main-title {
+  align-items: center;
+}
+
+.links {
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.links a:nth-child(2)::after {
+  content: '';
+  border: 1px solid var(--border-color);
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.content-align {
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+  font-family: var(--font-family);
+}
+
+.active {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+/* ! MISSIONS */
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+}
+
+thead td {
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-width: 150px;
+}
+
+tbody td {
+  font-size: 0.8rem;
+}
+
+.align-verticle {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.mission-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.active-member {
+  color: #fff;
+  background-color: var(--button-color);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.not-member {
+  background-color: #666;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.leave-mission {
+  color: #b91a1a;
+  padding: 10px;
+  border: 1px solid #b91a1a;
+  background-color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 600ms ease, color 600ms ease;
+}
+
+.leave-mission:hover {
+  background-color: #b91a1a;
+  color: #fff;
+}
+
+.join-mission {
+  background-color: transparent;
+  border: 1px solid #444;
+  color: #666;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 600ms ease, color 600ms ease;
+}
+
+.join-mission:hover {
+  background-color: rgba(68, 68, 68, 0.4);
+  color: #fff;
+}
+
+.background-gray:nth-child(even) {
+  background-color: #eee;
+}
+
+/* ! ROCKETS */
+
+.rocket-container {
+  flex-direction: column;
+}
+
+.rocket-card {
+  padding: 12px 0;
+  gap: 10px;
+}
+
+.rocket-content h2 {
+  font-size: 1.5rem;
+  padding: 5px 0;
+}
+
+.rocket-content p {
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+
+.rocket-content p span {
+  padding: 4px 7px;
+  background-color: var(--button-color);
+  margin-right: 4px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.img-container {
+  flex-grow: 1;
+}
+
+.img-container img {
+  width: 300px;
+}
+
+.rocket-content {
+  flex-grow: 2;
+}
+
+.not-reserved {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.reserved {
+  margin-top: 10px;
+  background: none;
+  padding: 10px;
+  border: 1px solid #999;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #999;
+  cursor: pointer;
+}
+
+/* ! PROFILE */
+
+.profile-container {
+  justify-content: space-around;
+}
+
+.profile-container .missions-container,
+.profile-container .rockets-container {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+.profile-container .missions-container h1,
+.profile-container .rockets-container h1 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+.profile-container .missions-container ul,
+.profile-container .rockets-container ul {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-container .missions-container li,
+.profile-container .rockets-container li {
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2rem;
+  padding: 20px;
+  color: #666;
+}
+
+.profile-container .missions-container li:last-child,
+.profile-container .rockets-container li:last-child {
+  border-bottom: none;
+}

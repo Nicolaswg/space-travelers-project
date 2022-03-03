@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --color-primary: #0290ff;
   --border-color: #ccc;
@@ -237,8 +241,4 @@ tbody td {
 .profile-container .missions-container li:last-child,
 .profile-container .rockets-container li:last-child {
   border-bottom: none;
-}
-
-::-webkit-scrollbar {
-	display: none;
 }

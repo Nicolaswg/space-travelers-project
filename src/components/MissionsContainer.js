@@ -4,7 +4,7 @@ import SingleMission from './SingleMission';
 
 export default function MissionsContainer() {
   const missionsData = useSelector((state) => state.missionsReducer);
-  // console.log(MissionsData);
+  console.log(missionsData);
   return (
     <table>
       <thead>

@@ -1,7 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import { addReservation, cancelReservation } from '../Redux/Rockets/rockets';
 
 const RocketItem = (props) => {
+  const dispatch = useDispatch();
   const {
     id,
     name,
@@ -9,6 +12,14 @@ const RocketItem = (props) => {
     image,
     reserved,
   } = props;
+
+  const onAddClick = () => {
+    dispatch(addReservation(id));
+  };
+
+  const onCancelClick = () => {
+    dispatch(cancelReservation(id));
+  };
 
   return (
     <div className="rocket-card flex" id={id}>
@@ -18,10 +29,10 @@ const RocketItem = (props) => {
       <div className="rocket-content">
         <h2>{name}</h2>
         <p>
-          {reserved ? (<></>) : (<span>Reserved</span>)}
+          {!reserved ? (<></>) : (<span>Reserved</span>)}
           {description}
         </p>
-        {reserved ? (<button className="not-reserved" type="button">Reserve Rocket</button>) : (<button className="reserved" type="button">Cancel Reservation</button>)}
+        {!reserved ? (<button className="not-reserved" type="button" onClick={onAddClick}>Reserve Rocket</button>) : (<button className="reserved" type="button" onClick={onCancelClick}>Cancel Reservation</button>)}
       </div>
     </div>
   );
@@ -30,8 +41,8 @@ const RocketItem = (props) => {
 export default RocketItem;
 
 RocketItem.propTypes = {
-  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   reserved: PropTypes.bool.isRequired,

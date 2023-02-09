@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/78875455/156580592-d4823be9-2185-4524-
 
 ## Live Demo
 
-[live demo link](https://space-travelers-react.herokuapp.com/)
+[live demo link](https://spacex-traveler-me.netlify.app/)
 
 ## Authors
 
